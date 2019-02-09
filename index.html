@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>PSIO Helper</title>
+        <meta name="description" content="PSIO Helper">
+        <meta name="author" content="Nexilar">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css?v=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="center">
+                PSIO library
+            </div>
+        </header>
+        <nav>
+            <div class="center">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Covers</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="center main">
+                <input type="text" placeholder="Filter by game name" onkeyup="filterGames(this)">
+                <div id="gameList" class="masonry"></div>
+            </div>
+        </main>
+    </body>
+</html>
+
+<script src="js/gamelist.js"></script>
+<script>
+    function filterGames(search) {
+        var html = '';
+
+        games.map(function (e) {
+            if (!e.name.toLowerCase().includes(search.value.toLowerCase())) {
+                return;
+            }
+
+            html += ' \
+                <div class="masonry-brick"> \
+                    <img src="images/fullsize/' + e.name + '.png"> \
+                    <span>' + e.name + '</span> \
+                </div>';
+        });
+
+        if (html === '') {
+            html = 'Sorry, your search has no results.'
+        }
+
+        document.getElementById("gameList").innerHTML = html;
+    }
+</script>

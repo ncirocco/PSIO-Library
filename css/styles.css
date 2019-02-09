@@ -1,0 +1,117 @@
+html {
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F0F0F0;
+}
+
+header {
+    font-size: 4rem;
+    background-color: #4F759F;
+    font-weight: bold;
+    color: #F0F0F0;
+}
+
+header > div {
+    padding: 0 1rem;
+}
+
+/* MENU */
+nav {
+    background-color: #0DA89C;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+nav ul li {
+    padding: .5rem;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li{
+    text-align:center;
+    flex:1;
+}
+
+input {
+    width: 98%;
+    padding: .5rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: .2rem;
+}
+
+.main {
+    text-align: center;
+}
+
+.center {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.masonry { 
+    display: flex;
+    flex-flow: row wrap;
+}
+  
+.masonry-brick {
+    flex: 0 0 25%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.masonry-brick span {
+    font-weight: bold;
+}
+
+.masonry-brick img {
+    width: 95%
+}
+
+@media only screen and (max-width: 900px) {
+    .masonry-brick {
+        flex: 0 0 33.33%;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    header {
+        text-align: center;
+    }
+    
+    .masonry-brick {
+        flex: 0 0 50%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .masonry-brick {
+        flex: 0 0 100%;
+    }
+}
