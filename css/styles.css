@@ -70,6 +70,10 @@ input {
     text-align: center;
 }
 
+.main p {
+    padding: 0 .5rem;
+}
+
 .center {
     max-width: 60rem;
     margin: 0 auto;
@@ -84,6 +88,11 @@ input {
     flex: 0 0 25%;
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.masonry-brick a {
+    color: #000000;
+    text-decoration: none;
 }
 
 .masonry-brick span {
@@ -103,8 +112,9 @@ input {
 @media only screen and (max-width: 610px) {
     header {
         text-align: center;
+        font-size: 3rem;
     }
-    
+
     .masonry-brick {
         flex: 0 0 50%;
     }
@@ -113,5 +123,11 @@ input {
 @media only screen and (max-width: 400px) {
     .masonry-brick {
         flex: 0 0 100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    header {
+        font-size: 2.5rem;
     }
 }

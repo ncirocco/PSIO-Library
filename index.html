@@ -14,17 +14,9 @@
                 PSIO library
             </div>
         </header>
-        <nav>
-            <div class="center">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Tutorials</a></li>
-                    <li><a href="#">Covers</a></li>
-                </ul>
-            </div>
-        </nav>
         <main>
             <div class="center main">
+                <p>Download the BMP image and place it into your game folder. It will be shown automatically in the PSIO menu.</p>
                 <input type="text" placeholder="Filter by game name" onkeyup="filterGames(this)">
                 <div id="gameList" class="masonry"></div>
             </div>
@@ -33,26 +25,4 @@
 </html>
 
 <script src="js/gamelist.js"></script>
-<script>
-    function filterGames(search) {
-        var html = '';
-
-        games.map(function (e) {
-            if (!e.name.toLowerCase().includes(search.value.toLowerCase())) {
-                return;
-            }
-
-            html += ' \
-                <div class="masonry-brick"> \
-                    <img src="images/fullsize/' + e.name + '.png"> \
-                    <span>' + e.name + '</span> \
-                </div>';
-        });
-
-        if (html === '') {
-            html = 'Sorry, your search has no results.'
-        }
-
-        document.getElementById("gameList").innerHTML = html;
-    }
-</script>
+<script src="js/main.js"></script>
