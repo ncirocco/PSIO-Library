@@ -103,6 +103,29 @@ input {
     width: 95%
 }
 
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+  
+.site-content {
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    padding: .5rem 0;
+    background-color: #0DA89C;
+    color: #FFFFFF;
+    font-size: .8rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 @media only screen and (max-width: 900px) {
     .masonry-brick {
         flex: 0 0 33.33%;
