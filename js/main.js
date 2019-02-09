@@ -11,7 +11,7 @@ function filterGames(search) {
 
             html += ' \
                 <div class="masonry-brick"> \
-                    <a href="images/covers/' + e.name + '.bmp"> \
+                    <a href="images/covers/' + e.name + '.bmp" download> \
                         <img src="images/fullsize/' + e.name + '.png"> \
                         <span>' + e.name + '</span> \
                     </a> \
