@@ -20,6 +20,7 @@ if (!window.File || !window.FileReader || !window.FileList || !window.Blob) {
 function handleFiles(filesList) {
     document.getElementById("idNotFound").innerHTML = '';
     document.getElementById("imageNotFound").innerHTML = '';
+    document.getElementById("wait").innerHTML = '';
 
     filesInfo = {};
 
@@ -39,7 +40,7 @@ function handleFiles(filesList) {
                 file: folderCovers[folder]
             })
         }
-
+        document.getElementById("wait").innerHTML = 'Preparing ZIP file. Please wait...';
         addCoversToZipAndDownload(new JSZip(), coversToBeZipped);
     }, 1000);
 }
@@ -58,6 +59,7 @@ function addCoversToZipAndDownload(zip, coversToBeZipped) {
         if (coversToBeZipped.length === 0) {
             zip.generateAsync({type:'blob'}).then(function (blob) {
                 saveAs(blob, ZIP_FILE_NAME);
+                document.getElementById("wait").innerHTML = 'Done!';
             });
 
             return;

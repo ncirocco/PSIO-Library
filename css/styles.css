@@ -23,7 +23,7 @@ header {
 }
 
 header > div {
-    padding: 0 1rem;
+    padding: .5rem 1rem;
 }
 
 /* MENU */
@@ -186,4 +186,8 @@ footer a {
   .errorLog {
     text-align: left;
     margin: 3rem 1rem;
+  }
+
+  .wait {
+    font-weight: bold;
   }
