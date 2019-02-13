@@ -155,3 +155,35 @@ footer a {
         font-size: 2.5rem;
     }
 }
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .btn {
+    border: 2px solid #E53350;
+    color: #FFFFFF;
+    background-color: #E94D66;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .errorLog {
+    text-align: left;
+    margin: 3rem 1rem;
+  }
