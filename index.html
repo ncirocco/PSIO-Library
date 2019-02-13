@@ -16,11 +16,36 @@
                 PSIO library
             </div>
         </header>
+        <nav>
+            <div class="center">
+                <ul>
+                    <li><a href="manual.html">Switch to manual search</a></li>
+                </ul>
+            </div>
+        </nav>
         <main class="site-content">
             <div class="center main">
-                <p>Download the BMP image and place it into your game folder. It will be shown automatically in the PSIO menu.</p>
-                <input type="text" placeholder="Filter by game name" onkeyup="filterGames(this)">
-                <div id="gameList" class="masonry"></div>
+                <p>
+                    Click on "Open PSIO Folder" and select the folder where you Playstation games are. A ZIP file will be generated with all the covers for your games in their respective folders.
+                    Unzip the file in your game folder and the images will be placed automatically next to their bin files.
+                </p>
+                <div class="upload-btn-wrapper">
+                    <button class="btn">Open PSIO Folder</button>
+                    <input 
+                        type="file" 
+                        name="files" 
+                        id="files" 
+                        onchange="handleFiles(this.files)" 
+                        webkitdirectory 
+                        mozdirectory 
+                        msdirectory 
+                        odirectory 
+                        directory 
+                        multiple='multiple'
+                    >
+                </div>
+                <div id="idNotFound" class="errorLog"></div>
+                <div id="imageNotFound" class="errorLog"></div>
             </div>
         </main>
     </body>
@@ -28,6 +53,8 @@
         <a href="https://github.com/ncirocco" target="_blank" rel="noopener noreferrer">Github Page</a> - <a href="mailto:nahuel.cirocco@gmail.com" target="_top">Contact</a> - All Rights Reserved
     </footer>
 </html>
-
-<script src="js/gamelist.js"></script>
-<script src="js/main.js"></script>
+<script src="js/jszip.min.js"></script>
+<script src="js/jszip-utils.min.js"></script>
+<script src="js/FileSaver.min.js"></script>
+<script src="js/covers.js"></script>
+<script src="js/automatic.js"></script>
