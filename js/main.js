@@ -1,11 +1,12 @@
-function filterGames(search) {
+function filterGames(search = null) {
+    var searchValue = search ? search.value.toLowerCase() : 'a';
     var breakException = {error:"stop it"};
     var html = '';
     var i = 0;
 
     try {
         games.map(function (e) {
-            if (!e.name.toLowerCase().includes(search.value.toLowerCase())) {
+            if (!e.name.toLowerCase().includes(searchValue)) {
                 return;
             }
 
